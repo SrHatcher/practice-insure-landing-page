@@ -17,19 +17,36 @@
 </head>
 <body>
 
-  <header>
-    <a class="header__logo" href="./" aria-label="company logo"><img src="./images/logo.svg" alt="Company logo"></a>
-    
-    <nav class="header__navbar">
+  <header id="nav">
+    <div class="header__container" >
+      <a class="header__logo" href="./" aria-label="company logo"><img src="./images/logo.svg" alt="Company logo"></a>
+  
+      <nav class="header__navbar_in" >
+        <ul class="header__list">
+          <li class="header__item"><a href="./">HOW WE WORK</a></li>
+          <li class="header__item"><a href="./">BLOG</a></li>
+          <li class="header__item"><a href="./">ACCOUNT</a></li>
+          <li class="header__item"><a href="./">VIEW PLANS</a></li> 
+        </ul>
+      </nav>
+
+      <a href="#nav" class="header__open button">
+        <img src="./images/icon-hamburger.svg" alt="open">
+      </a>
+      <a href="#" class="header__close button">
+        <img src="./images/icon-close.svg" alt="close">
+      </a>
+    </div>
+
+    <nav class="header__navbar_out" >
+      <div class="header__pattern"></div>
       <ul class="header__list">
-        <li class="header__item"><a href="./">How we work</a></li>
-        <li class="header__item"><a href="./">Blog</a></li>
-        <li class="header__item"><a href="./">Account</a></li>
-        <li class="header__item"><a href="./">View plans</a></li> 
+        <li class="header__item"><a href="./">HOW WE WORK</a></li>
+        <li class="header__item"><a href="./">BLOG</a></li>
+        <li class="header__item"><a href="./">ACCOUNT</a></li>
+        <li class="header__item"><a href="./">VIEW PLANS</a></li> 
       </ul>
     </nav>
-
-    <button class="header__button button">x</button>
   </header>
 
   <main>
@@ -95,7 +112,7 @@
             <i class="fa-brands fa-twitter fa-xl"></i>
           </a>
           <a class="footer__social_link" href="./" aria-label="See our content on Pinterest">
-            <i class="fa-brands fa-pinterest"></i>
+            <i class="fa-brands fa-pinterest fa-xl"></i>
           </a>
           <a class="footer__social_link" href="./" aria-label="See our content on Instagram">
             <i class="fa-brands fa-instagram fa-xl"></i>

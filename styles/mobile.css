@@ -49,14 +49,120 @@ body{
     font-weight: 400;
 }
 
-header{}
-.header__logo{}
-.header__navbar{}
-.header__list{}
-.header__item{}
-.header__button{}
+header{
+    width: 100%;
+    height: 6rem;
 
-main{}
+    --state-close: scale(0);
+    --state-open: scale(1);
+    --state-menu: translateX(-100%);
+}
+header:target{
+    --state-close: scale(1);
+    --state-open: scale(0);
+    --state-menu: translateX(0)
+}
+.header__container{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between;
+    align-items: center;
+
+    height: 6rem;
+    width: 100%;
+    padding: 0 2.5rem;
+
+    background-color: white;
+    z-index: 1;
+}
+.header__logo{}
+.header__navbar_in{
+    display: none;
+}
+.header__navbar_out{
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+
+    padding-block-start: 10rem;
+
+    background-color: var(--very-dark-violet);
+    transform: var(--state-menu);
+    transition: .3s transform;
+}
+.header__list{
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    gap: 3rem;
+
+    padding: 0;
+    margin: 0;
+}
+.header__item{
+    list-style: none;
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+
+    cursor: pointer;
+}
+.header__item a{
+    text-decoration: none;
+
+    color: white;
+}
+.header__navbar_out .header__list .header__item:nth-child(4){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    white-space: nowrap;
+    width: 30rem;
+    height: 5rem;
+
+    border: solid 0.2rem white;
+}
+
+.header__open, .header__close{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+
+    cursor: pointer;
+    transition: 0.4s transform;
+    z-index: 2;
+}
+
+.header__open{
+    transform: var(--state-open);
+}
+.header__close{
+    transform: var(--state-close);
+}
+
+.header__pattern{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    width: 100%;
+    height: 21.5rem;
+
+    background-image: url('../images/bg-pattern-mobile-nav.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+main{
+    display: none;
+}
 .main__firstview{}
 .firstview__container{}
 .firstview__line{}
@@ -79,7 +185,9 @@ main{}
 .thirdview__title{}
 .thirdview__button{}
 
-footer{}
+footer{
+    display: none;
+}
 .footer__container{}
 .footer__header{}
 .footer__logo{}
@@ -91,7 +199,9 @@ footer{}
 .footer__list{}
 .footer__item{}
 
-.button{}
+.button{
+
+}
 .snappy{}
 .affordable{}
 .people{}
