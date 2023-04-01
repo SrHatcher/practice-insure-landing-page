@@ -167,6 +167,9 @@ main{
 }
 .main__firstview{
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     background-color: var(--dark-violet);
 }
@@ -223,6 +226,8 @@ main{
     height: 45rem;
 
     background-image: url('../images/image-intro-mobile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .firstview__pattern{
     position: absolute;
@@ -491,4 +496,10 @@ footer{
 }
 .people{
     background-image: url('../images/icon-people-first.svg');
+}
+
+@media screen and (min-width: 480px){
+    .firstview__image{
+        background-image: url('../images/image-intro-desktop.jpg');
+    }
 }
