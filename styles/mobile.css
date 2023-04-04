@@ -473,6 +473,7 @@ footer{
     text-decoration: none;
 
     color: var(--very-dark-violet);
+    transition: all ease-in 0.2s;
 }
 
 .button{
@@ -486,9 +487,11 @@ footer{
 
     letter-spacing: 0.2rem;
 
+    cursor: pointer;
     border: solid 0.2rem white;
     background-color: transparent;
     color: white;
+    transition: all ease-in 0.2s;
 }
 .snappy{
     background-image: url('../images/icon-snappy-process.svg');
@@ -546,6 +549,7 @@ footer{
         text-decoration: none;
     
         color: #a0a0a0;
+        transition: all ease-in 0.2s ;
     }
     .header__navbar_in .header__list .header__item:nth-child(4){
         display: flex;
@@ -557,6 +561,7 @@ footer{
         height: 4rem;
 
         border: solid 0.2rem var(--very-dark-violet);
+        transition: all ease-in 0.2s;
     }
 
     .header__navbar_in .header__list .header__item:nth-child(4) a{
@@ -572,5 +577,29 @@ footer{
 
     .footer__body{
         column-gap: 7rem;
+    }
+}
+
+@media (hover:hover){
+    .button:hover{
+        background-color: white;
+        color: var(--very-dark-violet);
+    }
+    .header__navbar_in .header__list .header__item a:hover{
+        color: #686868;   
+    }
+
+    .header__navbar_in .header__list .header__item:nth-child(4):hover{
+        background-color: var(--very-dark-violet);
+        
+    }
+    .header__navbar_in .header__list .header__item:nth-child(4) a:hover{
+        color: white;
+    }
+    .footer__item a:hover{
+        text-decoration: underline;
+    }
+    .footer__social_link:hover{
+        color: #585858;
     }
 }

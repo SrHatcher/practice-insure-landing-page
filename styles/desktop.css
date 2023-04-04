@@ -39,7 +39,6 @@ header{
 .header__navbar_in .header__list .header__item:nth-child(4) a{
     color: var(--very-dark-violet);
 }
-
 .header__open, .header__close{
     display: none;
 }
@@ -194,6 +193,7 @@ header{
     flex-direction: row;
 
     height: 25rem;
+    max-width: 111rem;
     padding: 0 8.1rem;
 }
 .thirdview__title{
